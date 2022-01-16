@@ -2,9 +2,12 @@
 - name: test
   gather_facts: no
   hosts: localhost
+  vars:
+    fail_job: False
   tasks:
     - name: Shell
       shell: echo ok
     
     - name: fail
       shell: mv kokot.yml /tmp
+      when: fail_job
