@@ -1,0 +1,10 @@
+---
+- name: test
+  gather_facts: no
+  hosts: localhost
+  tasks:
+    - name: Shell
+      shell: echo ok
+    
+    - name: fail
+      shell: mv kokot.yml /tmp
